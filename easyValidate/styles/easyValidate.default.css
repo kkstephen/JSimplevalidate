@@ -1,0 +1,79 @@
+/* jqueryEasyValidate: default */
+
+/* Forms */
+.form-item {
+	display: inline-block;
+	margin: 0 0 2% 0;
+	width: 100%;
+}
+
+label {
+	color: #999;
+	display: block;
+	font: 16px Arial, Helvetica, sans-serif;
+	font-style: italic;
+	line-height: 150%;
+}
+
+input, 
+textarea, 
+select {
+	border: 1px solid #ccc;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	font: 16px Arial, Helvetica, sans-serif;
+	color: #666;
+	outline: none;
+	padding: 10px;
+	width: 100%;
+}
+
+input.form-error, 
+textarea.form-error, 
+select.form-error {
+	border: 1px solid #dd4b39;
+}
+
+textarea {
+	height: 100px;
+}
+
+
+
+
+/* Notifications */
+.formErrorContent {
+	background: #da4141;
+	color: #fff;
+	font: 12px Arial, Helvetica, sans-serif;
+	padding: 10px;
+}
+
+/* Ajax */
+.ajaxError, 
+.ajaxSuccess, 
+.ajaxLoading {
+	display: none;
+	font-size: 16px;
+	line-height: 18px;
+	padding: 40px;
+	z-index: 5000;
+}
+.ajaxError {
+	background: #da4141;
+	border: 10px solid #8d0a0a;
+	color: #8d0a0a;
+}
+.ajaxSuccess {
+	background: #abf321;
+	border: 10px solid #628e0e;
+	color: #628e0e;
+}
+.ajaxLoading {
+	background: #fff url(../img/ajax-loader.gif) no-repeat 25% 50%;
+	border: 10px solid #eee;
+	color: #333;
+	display: none;
+}

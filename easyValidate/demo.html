@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head lang="en">
+<meta charset="utf-8">
+<title>Demo: jQuery Easy Validate</title>
+<link rel="stylesheet" href="styles/demo.css" media="screen">
+<link rel="stylesheet" href="styles/easyValidate.default.css" media="screen">
+</head>
+<body>
+	<div id="container">
+    	<header>
+            <h1>Demo: jQuery Easy Validate</h1>
+        </header>
+        <section>
+        	<div id="contact-form">
+                <form id="form_demo" method="post" action="ajax.php">
+                <div class="form-item">
+                    <label for="txt_name">Your name</label>
+                    <input type="text" name="txt_name" id="txt_name" value="" class="required">
+                </div>
+                <div class="form-item">
+                    <label for="txt_email">Your email address</label>
+                    <input type="text" name="txt_email" id="txt_email" value="" class="required email">
+                </div>
+                <div class="form-item">
+                    <label for="txt_message">Your message</label>
+                    <textarea name="txt_message" id="txt_message" class="required"></textarea>
+                </div>
+                <div class="form-item">
+                    <label for="txt_searchengine">Search engine</label>
+                    <select name="txt_searchengine" id="txt_searchengine" class="required">
+                        <option value="0">Please select...</option>
+                        <option value="1">Google</option>
+                        <option value="2">Yahoo</option>
+                        <option value="3">Bing</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <input type="submit" value="Submit" class="button">
+                </div>
+                </form>   
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery.easyValidate.js"></script>
+<script>
+$(function(){
+    // Initialize easyValidate plugin
+    $('#contact-form').easyValidate({
+        ajaxSubmit : true,
+        ajaxSubmitFile : 'ajax.php'
+    });
+});
+</script>
+</body>
+</html>
