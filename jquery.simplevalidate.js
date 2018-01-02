@@ -34,8 +34,8 @@
             var button;
 
             // GET ALL FORM ELEMENTS
-            var elements = $(this).find('input, textarea, radio, checkbox, select');
-
+            var elements = $(this).find('input, textarea, radio, checkbox, select');       
+                
             $(this).submit(function () {
                 if (_isValid()) {
                     if (settings.onsubmit) {
@@ -59,7 +59,7 @@
                     _getRules($(this));
                 });
             });
-
+            
             // GET RULES FROM CLASS NAME
             function _getRules(element) {
                 var rulesParsed = element.attr('class');
@@ -162,14 +162,10 @@
             function _isValid() {
                 var errorsFound = 0;
                 elements.each(function () {
-                    var elementTagName = this.tagName;
-                    var elementType = $(this).attr('type');
-                    if (elementTagName == 'INPUT' && elementType == 'text' || elementTagName == 'INPUT' && elementType == 'password' || elementTagName == 'TEXTAREA' || elementTagName == 'SELECT') {
-                        _getRules($(this));
+                    _getRules($(this));
                         if (isError) {
                             errorsFound++;
-                        }
-                    }
+                        } 
                 });
                 if (!errorsFound > 0) {
                     return true;
